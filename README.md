@@ -3,10 +3,6 @@
 
 [![Github Actions Status](../../workflows/Docker/badge.svg)](../../actions)
 
-## Description
-
-The template repository contains the exercise `Hello, World!` and the basic structure for all exercise repos. Use the `make find-todo` command to find a template code to replace for your language
-
 ## How to contribute
 
 * Discussions at #hexlet-volunteers Slack channel http://slack.hexlet.io

@@ -5,9 +5,6 @@ compose-setup: compose-build
 compose:
 	docker-compose up
 
-# compose-install:
-# 	docker-compose run exercises bundle install
-
 compose-bash:
 	docker-compose run exercises bash
 
@@ -20,9 +17,14 @@ compose-test:
 compose-code-lint:
 	docker-compose run exercises make code-lint
 
+compose-code-lint-fix:
+	docker-compose run exercises make code-lint-fix
+
 code-lint:
-	# TODO: add linter
-	echo "code-lint"
+	ameba
+
+code-lint-fix:
+	ameba --fix
 
 compose-description-lint:
 	docker-compose run exercises make description-lint

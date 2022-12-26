@@ -1,12 +1,15 @@
 FROM hexletbasics/base-image:latest
 
-# TODO: replace exercises-template with "exercises-<language>"
-WORKDIR /exercises-template
+RUN apt-get update
 
-# https://github.com/pgrange/bash_unit
-RUN cd /usr/local/bin && curl -s https://raw.githubusercontent.com/pgrange/bash_unit/master/install.sh | bash
+RUN curl -fsSL https://crystal-lang.org/install.sh | bash
+
+RUN git clone https://github.com/crystal-ameba/ameba && cd ameba
+
+WORKDIR /exercises-crystal
 
 COPY . .
 
-# TODO: replace
-ENV PATH=/exercises-template/bin:$PATH
+RUN shards install
+
+ENV PATH=/exercises-crystal/bin:$PATH

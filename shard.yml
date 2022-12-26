@@ -1,0 +1,14 @@
+name: exercises-crystal
+version: 0.1.0
+
+authors:
+  - Hexlet
+
+dependencies:
+  ameba:
+    github: crystal-ameba/ameba
+    version: ~> 1.3.0
+
+crystal: 1.6.2
+
+license: MIT
