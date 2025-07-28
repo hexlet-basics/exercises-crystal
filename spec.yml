@@ -1,7 +1,7 @@
 ---
 
 language:
-  docker_image: "hexletbasics/exercises-crystal"
+  docker_image: "ghcr.io/hexlet-basics/exercises-crystal"
   extension: cr
   exercise_filename: main.cr
   exercise_test_filename: main_spec.cr
